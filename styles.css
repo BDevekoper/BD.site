@@ -1,38 +1,67 @@
-body {
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: url('macos-wallpaper.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
-.desktop {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+/* Background with Blur Effect */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('ios10-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
 }
 
-.icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80px;
+/* Container for Content */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-}
-
-.icon img {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 5px;
-}
-
-.icon:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.2rem;
+    margin: 0 0 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* iOS-Style Button */
+.ios-button {
+    background: linear-gradient(135deg, #007AFF, #00A8FF);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.ios-button:hover {
+    background: linear-gradient(135deg, #00A8FF, #007AFF);
 }
