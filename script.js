@@ -1,7 +1,4 @@
-document.querySelectorAll('.icon').forEach(icon => {
-    icon.addEventListener('click', () => {
-        const app = icon.getAttribute('data-app');
-        alert(`Opening ${app}...`);
-        // You can replace this with actual app functionality
-    });
+document.querySelector('.ios-button').addEventListener('click', () => {
+    alert('Welcome to the iOS 10 experience!');
+    // You can redirect to another page or add more functionality here
 });
